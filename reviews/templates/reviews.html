@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Сайт отзывов и предложений</h1>
+<div class="review-form">
+    <h2>Оставить отзыв</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <!--
+        <p><input type="text" placeholder="Введите Ваше имя" name="name"></p>
+        <p><input type="text" placeholder="Введите адрес электронной почты" name="email"></p>
+        <p><textarea placeholder="Напишите Ваш отзыв" cols = '50' rows="5" name="review"></textarea></p>
+        -->
+        <p><input type="submit" value="Оставить отзыв"></p>
+
+    </form>
+
+</div>
+<div class="reviews">
+    <h2>Все отзывы</h2>
+    <hr>
+    {% for review in reviews %}
+    <div>
+      <p class="user"> Оставил комментарий: {{review.name}}</p>
+        <p class="rating"> Оценка: {{review.rating}}</p>
+      <p class="review-text">{{review.review}}</p>
+    <hr>
+    <!--<p><em>{{ review.name }} </em>, почта: {{ review.email }}, оставил(а) отзыв: </p>
+    <p>"{{ review.review }}"</p>
+    <hr> -->
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
