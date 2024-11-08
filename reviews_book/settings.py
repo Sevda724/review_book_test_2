@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-p!4@)#g+ltm^=y24#1ke93)c1(jq^3ibqu$jms&c&t3akdlt2$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['review_book_test_22.onrender.com']
+ALLOWED_HOSTS = ['review-book-test-22.onrender.com']
 
 #db_connection='postgresql://test1_30p4_user:VrTZxCum94JNQnTf6s8HdVRca2rV8zud@dpg-csmq0r0gph6c73fo49v0-a/test1_30p4'
 db_connection='postgresql://test1_30p4_user:VrTZxCum94JNQnTf6s8HdVRca2rV8zud@dpg-csmq0r0gph6c73fo49v0-a.oregon-postgres.render.com/test1_30p4'
